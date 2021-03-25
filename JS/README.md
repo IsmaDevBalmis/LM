@@ -1,3 +1,3 @@
 # JavaScript
 
-./Assets/javascript.png
+Assets/javascript.png
