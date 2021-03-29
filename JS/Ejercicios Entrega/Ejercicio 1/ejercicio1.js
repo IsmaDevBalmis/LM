@@ -1,9 +1,12 @@
 let productoArray = 1;
 
 function Ejercicio1(cadena, booleano, array, ){
+    
+    //Primero debes comprobar que los tipos son los esperables
 
-    if(booleano == true){
+    if(booleano == true){ //No hace falta poner == true
 
+        //REcorre con foreach (en arrays y funciones está sumar todos con un foreach, aquí tienes que multiplicar)
         for(let i of array){
             productoArray *= i
         }
@@ -11,6 +14,7 @@ function Ejercicio1(cadena, booleano, array, ){
 
         if(productoArray > 100){
 
+            //Este puede estar con una ternaria y comprimes más
             if(cadena.indexOf('a') >= 1){
                 console.log("El caracter 'a' no está permitido.")
             }else{
@@ -32,3 +36,4 @@ function Ejercicio1(cadena, booleano, array, ){
 
 
 Ejercicio1("Hola mundo",true,[1,2])
+//Pon más llamadas, como las que tienes en el enunciado
