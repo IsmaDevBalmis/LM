@@ -1,39 +1,54 @@
+'use strict';
+
 let productoArray = 1;
 
-function Ejercicio1(cadena, booleano, array, ){
+function Ejercicio1(cadena, booleano, array, funcion){
+
+    if(typeof cadena == "string" && typeof booleano == "boolean" && Array.isArray(array)){
+
+
+        if(booleano){
+
+            array.forEach(MyArray)
+            /*for(let i of array){
+                productoArray *= i
+            }*/
+            
     
-    //Primero debes comprobar que los tipos son los esperables
-
-    if(booleano == true){ //No hace falta poner == true
-
-        //REcorre con foreach (en arrays y funciones está sumar todos con un foreach, aquí tienes que multiplicar)
-        for(let i of array){
-            productoArray *= i
-        }
-        
-
-        if(productoArray > 100){
-
-            //Este puede estar con una ternaria y comprimes más
-            if(cadena.indexOf('a') >= 1){
-                console.log("El caracter 'a' no está permitido.")
+            
+    
+            if(productoArray > 100){
+    
+                cadena.indexOf('a') >= 1 ? console.log("El caracter 'a' no está permitido.") : console.log("Muy bien no has usado la 'a'.")
+    
+    
             }else{
-                console.log("Muy bien no has usado la 'a'.")
+                console.log("El resultado de tu array es insuficiente para comprobar la cadena.")
             }
-
+    
         }else{
-            console.log("El resultado de tu array es insuficiente para comprobar la cadena.")
+    
+            console.log(booleano)
+            funcion()
+    
         }
+
 
     }else{
-
-        //ANCHOR Comprobar que la llamada a la función es así
-        //funcion()
-
+         console.log("No son los datos esperados")
     }
 
 }
 
+let sum = 0
 
-Ejercicio1("Hola mundo",true,[1,2])
-//Pon más llamadas, como las que tienes en el enunciado
+function MyArray(item){
+
+    productoArray *= item
+
+}
+
+Ejercicio1()
+Ejercicio1("Hola mundo",true,[1,2,3,4],()=>{alert("Se acabó el juego")})
+Ejercicio1("Si",true,[10,20,30,40],()=>{alert("Se acabó el juego")})
+Ejercicio1("Si",false,[10,20,30,40],()=>{alert("Se acabó el juego")})
