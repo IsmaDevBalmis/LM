@@ -2,7 +2,7 @@
 
 function varAsignaturas(nombre,cursos, ...asignaturas) {
   
-  if(!nombre || !cursos || ! asignaturas){
+  if(!nombre || !cursos || !asignaturas){
   
     console.log("No hay datos para mostrar")
   }else{

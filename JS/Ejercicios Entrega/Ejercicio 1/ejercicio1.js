@@ -4,7 +4,7 @@ let productoArray = 1;
 
 function Ejercicio1(cadena, booleano, array, funcion){
 
-    if(typeof cadena == "string" && typeof booleano == "boolean" && Array.isArray(array)){
+    if(typeof cadena == "string" && typeof booleano == "boolean" && Array.isArray(array) && typeof funcion == "function"){
 
 
         if(booleano){
